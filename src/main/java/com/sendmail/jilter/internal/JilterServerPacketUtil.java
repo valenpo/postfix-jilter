@@ -156,7 +156,7 @@ public class JilterServerPacketUtil
 
     public static String getZeroTerminatedString(ByteBuffer dataBuffer)
     {
-        StringBuffer newString = new StringBuffer();
+        StringBuilder newString = new StringBuilder();
 
         while (dataBuffer.remaining() > 0)
         {
@@ -181,6 +181,6 @@ public class JilterServerPacketUtil
             array.add(getZeroTerminatedString(dataBuffer));
         }
 
-        return (String[]) array.toArray(new String[array.size()]);
+        return (String[]) array.toArray(new String[0]);
     }
 }
